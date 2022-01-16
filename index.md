@@ -1,37 +1,128 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmy_ink Frontend</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="#">Remember<span>That</span></a>
 
-You can use the [editor on GitHub](https://github.com/Emmyinkk/Test-lab/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Navigation">
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+                <ul class="primary-nav">
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
 
-### Markdown
+                <ul class="secondary-nav">
+                    <li><a href="#">Contact</a></li>
+                    <li class="go-premium-cta"><a href="#">Go Premium</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                <p class="subhead">It's Nitty &amp; Gritty</p>
+                <h1>A Task App that Doesn't Stink</h1>
 
-```markdown
-Syntax highlighted code block
+                <div class="hero-cta">
+                    <a href="#" class="primary-cta"> Try for free</a>
+                    <a href="#" class="watch-video-cta">
+                        <img src="images/watch.svg" alt="Watch a video"> Watch a video
+                    </a>
+                </div>
+            </div>
 
-# Header 1
-## Header 2
-### Header 3
+            <img src="images/illustration.svg" class="hero-img"alt="Illustration">
+        </div>
+    </section>
 
-- Bulleted
-- List
+    <section class="features-section">
+        <div class="container">
+            <ul class="features-list">
+                <li>Unlimited Tasks</li>                
+                <li>SMS Task Reminders</li>               
+                <li>Confetti Explosions upon Task Completions</li>                
+                <li>Social Media Announcements</li>                
+                <li>Real Time Collaboration</li>                
+                <li>Other awesome features</li> 
+            </ul>
 
-1. Numbered
-2. List
+            <img src="images/holding-phone.jpg" alt="Man holding phone">
+        </div>
+    </section>
 
-**Bold** and _Italic_ and `Code` text
+    <section class="testimonial-section">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="images/person.jpg" alt="Person">
 
-[Link](url) and ![Image](src)
-```
+                    <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"</blockquote>
+                    <cite>- Jane Doe</cite>
+                </li>
+                <li>
+                    <img src="images/person.jpg" alt="Person">
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+                    <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"</blockquote>
+                    <cite>- Jane Doe</cite>
+                </li>
+                <li>
+                    <img src="images/person.jpg" alt="Person">
 
-### Jekyll Themes
+                    <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"</blockquote>
+                    <cite>- Jane Doe</cite>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Emmyinkk/Test-lab/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-left">
+                <h2>Contact</h2>
 
-### Support or Contact
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <input type="submit" class="send-message-cta" value="Send Message">
+                </form>
+            </div>
+            <div class="contact-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.554875292098!2d3.3876879142967846!3d6.451144725791167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8ba0cd679785%3A0x65bf35c36d533982!2sCoralstone%20Capital!5e0!3m2!1sen!2sng!4v1621322447449!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta')
+            nav = document.querySelector('nav')
+            mobileBtnExit = document.getElementById('mobile-exit');
+
+    mobileBtn.addEventListener('click', () => {
+        nav.classList.add('menu-btn');
+    })
+
+    mobileBtnExit.addEventListener('click', () => {
+        nav.classList.remove('menu-btn');
+    })
+
+    </script>
+
+</body>
+</html>
